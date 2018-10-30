@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="10dp"
+    android:orientation="horizontal">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/Id_parent_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp">
+
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/Id_movie_list_Img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/Id_movie_list_Constraint"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/Id_movie_list_Constraint"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toEndOf="@id/Id_movie_list_Img">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/Id_movie_list_txt_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/Id_movie_list_txt_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/Id_movie_list_lay_btm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Id_movie_list_img_right"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Id_movie_list_txt_title"
+            app:layout_constraintTop_toTopOf="@+id/Id_movie_list_txt_title"/>
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/Id_movie_list_img_right"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@mipmap/ic_right"
+            app:layout_constraintBottom_toBottomOf="@+id/Id_movie_list_lay_btm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Id_movie_list_txt_title" />
+
+        <LinearLayout
+            android:id="@+id/Id_movie_list_lay_btm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/Id_movie_list_txt_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="@drawable/bg_rating"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/Id_movie_list_txt_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="11sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/Id_movie_list_txt_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="@drawable/bg_language"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
