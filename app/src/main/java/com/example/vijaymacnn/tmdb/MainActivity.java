@@ -11,22 +11,18 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
-import android.view.View;
 
 import com.example.vijaymacnn.tmdb.Adapter.Adapter_MovieList;
 import com.example.vijaymacnn.tmdb.Interface.Interface_Adap;
 import com.example.vijaymacnn.tmdb.Interface.RetroFunctions;
-import com.example.vijaymacnn.tmdb.Interface.RetroInterface;
 import com.example.vijaymacnn.tmdb.Model.MoviesList.Example;
 import com.example.vijaymacnn.tmdb.Model.MoviesList.Result;
-import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -69,7 +65,6 @@ public class MainActivity extends AppCompatActivity implements Interface_Adap{
                         if (totalItemCount < totalcount && RetroFunctions.isNetworkAvailable(MainActivity.this)) {
                             isLoading = true;
                             page++;
-                            System.out.println("LOAD_MORE_EXECUTED :"+page);
                             getMoviesList();
                         }
                     }
@@ -100,7 +95,6 @@ public class MainActivity extends AppCompatActivity implements Interface_Adap{
         RetroFunctions.RetroInstance().getMoviesList(objParams).enqueue(new Callback<Example>() {
             @Override
             public void onResponse(@NonNull Call<Example> call, @NonNull Response<Example> response) {
-                System.out.println("CHECK_RES :"+new Gson().toJson(response));
                 if (response.isSuccessful()){
                     if(isloading()){
                         HideLoading();
@@ -113,7 +107,6 @@ public class MainActivity extends AppCompatActivity implements Interface_Adap{
                                 objAdapt_MovieList.notifyDataSetChanged();
                                 totalcount=objBody.getTotalResults();
                                 isLoading=false;
-                                System.out.println("LOAD_MORE_EXECUTED DONE");
                             }
                         }
                     }

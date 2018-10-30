@@ -1,7 +1,6 @@
 package com.example.vijaymacnn.tmdb;
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;

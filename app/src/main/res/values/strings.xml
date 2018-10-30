@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Tmdb</string>
     <string name="api_key">1f808b9ef499974c11947e935cc23fab</string>
+    <string name="budget">Budget</string>
+    <string name="revenue">Revenue</string>
 </resources>

@@ -1,9 +1,5 @@
 package com.example.vijaymacnn.tmdb.Common;
 
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.graphics.drawable.ColorDrawable;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -12,7 +8,7 @@ import java.util.Locale;
 public class CommonFunctions {
     public static String convertDate(String objDate){
         SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
-        Date date = null;
+        Date date;
         try {
             date = fmt.parse(objDate);
             SimpleDateFormat format_day = new SimpleDateFormat("dd",Locale.getDefault());

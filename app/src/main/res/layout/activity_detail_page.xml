@@ -47,7 +47,6 @@
             android:paddingEnd="20dp"
             android:paddingRight="20dp"
             android:paddingBottom="10dp"
-            android:text="afasfafafasfa"
             android:textColor="@android:color/black"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -182,7 +181,7 @@
                         android:paddingLeft="10dp"
                         android:paddingEnd="5dp"
                         android:paddingRight="5dp"
-                        android:text="Budget"
+                        android:text="@string/budget"
                         android:textColor="@android:color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -225,7 +224,7 @@
                         android:paddingLeft="10dp"
                         android:paddingEnd="5dp"
                         android:paddingRight="5dp"
-                        android:text="Revenue"
+                        android:text="@string/revenue"
                         android:textColor="@android:color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
